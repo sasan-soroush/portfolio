@@ -478,7 +478,7 @@ template {
 }
 
 .display-4 {
-  font-size: 3.5rem
+  font-size: 1.5rem
 }
 
 hr {
@@ -9481,7 +9481,7 @@ a.text-dark:focus, a.text-dark:hover {
 .hero-background {
   width: 100%;
   height: 100vh;
-  background-image: url('Images/BG.png');
+  background-image: url('Images/BG.jpg');
   background-size: cover;
   background-position: 80%
 }
@@ -9507,7 +9507,7 @@ a.text-dark:focus, a.text-dark:hover {
 .hero-title {
   margin-top: auto;
   color: #fff;
-  font-size: 5rem
+  font-size: 2.7rem
 }
 
 .hero-title:after {
@@ -9522,7 +9522,7 @@ a.text-dark:focus, a.text-dark:hover {
 
 .hero-slogan {
   color: hsla(0, 0%, 100%, .9);
-  font-weight: 100
+  font-weight: 350
 }
 
 .navbar {
@@ -9823,7 +9823,7 @@ body {
 }
 
 .hero-overlay {
-  background-color: rgba(0, 0, 0, 0.30)
+  background-color: rgba(0, 0, 0, 0.3)
 }
 
 .navbar {
@@ -9909,4 +9909,42 @@ h1, h2, h3, h4, h5, h6, .album-title, .album-description, .hero-title, .hero-slo
 .myButton:active {
 	position:relative;
 	top:2px;
+}
+
+.typewriter h2 {
+
+  height: 50px;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em ; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .001em; /* Adjust as needed */
+  animation:
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+.white-bg {
+  background-color: rgb(219, 219, 219);
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 24px;
+  padding-bottom: 10px;
+  border-radius: 2px;
+  white-space: nowrap;
+}
+
+.title-labels {
+  color: black;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
 }
