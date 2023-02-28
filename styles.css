@@ -260,6 +260,10 @@ a {
   -webkit-text-decoration-skip: objects
 }
 
+a.SSTeam {
+  text-decoration: underline;
+}
+
 a:hover {
   color: #ffaa03;
   text-decoration: underline
