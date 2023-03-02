@@ -449,7 +449,7 @@ template {
 }
 
 .album-title, .h1, h1 {
-  font-size : clamp(1.5rem, 10vw, 5rem);
+  font-size : clamp(1.5rem, 10vw, 3.5rem);
 }
 
 .h2, .photo-background .photo-navigation .photo-title, h2 {
