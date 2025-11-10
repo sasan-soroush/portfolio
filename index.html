@@ -109,12 +109,17 @@
               <section>
                 <h1>OptimaScan</h1>
                 <br />
-                <p align="center">
-                  <video autoplay muted loop playsinline style="width: 100%; max-width: 750px; border-radius: 12px;">
-                    <source src="videos/OptimaScan Device Rotation Slow.mp4" type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
-                </p>
+                <div style="display: flex; justify-content: center;">
+                  <div class="video-container" style="width: 100%; max-width: 750px;">
+                    <div class="video-placeholder">
+                      <div class="spinner"></div>
+                    </div>
+                    <video class="showcase-video" autoplay muted loop playsinline>
+                      <source src="videos/optimascan_video.mp4" type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                </div>
                 <br />
                 <div>
                   <p>
@@ -596,6 +601,19 @@
       AOS.init({
         easing: "ease-in-out",
         duration: "800",
+      });
+
+      // Handle video loading placeholder ↴
+      document.addEventListener("DOMContentLoaded", function () {
+        const video = document.querySelector("video.showcase-video");
+        const container = video?.closest(".video-container");
+        if (!video || !container) return;
+
+        const markLoaded = () => container.classList.add("loaded");
+
+        // Some mobile browsers may not fire 'loadeddata' promptly; use timeupdate fallback too
+        video.addEventListener("loadeddata", markLoaded, { once: true });
+        video.addEventListener("timeupdate", markLoaded, { once: true });
       });
     </script>
   </body>
