@@ -109,27 +109,12 @@
               <section>
                 <h1>OptimaScan</h1>
                 <br />
-                <div class="video-wrapper" style="text-align:center;">
-                  <video id="optimascanVideo" autoplay muted loop playsinline>
+                <p align="center">
+                  <video autoplay muted loop playsinline style="width: 100%; max-width: 750px; border-radius: 12px;">
                     <source src="videos/OptimaScan Device Rotation Slow.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                   </video>
-                  <div id="optimascanLoading" class="video-loading">
-                    <div class="spinner"></div>
-                  </div>
-                </div>
-
-                <script>
-                  document.addEventListener('DOMContentLoaded', function () {
-                    var video = document.getElementById('optimascanVideo');
-                    var loading = document.getElementById('optimascanLoading');
-                    function hide() {
-                      if (loading) loading.style.display = 'none';
-                    }
-                    video.addEventListener('loadeddata', hide, { once: true });
-                    video.addEventListener('play', hide, { once: true });
-                  });
-                </script>
+                </p>
                 <br />
                 <div>
                   <p>
